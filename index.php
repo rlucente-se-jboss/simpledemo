@@ -13,7 +13,7 @@
   </style>
  </head>
  <body>
- <h1>Hello AFCEA Cyber!<h1>
+ <h1>Hello AFCEA Cyber!</h1>
  <p>This simple demo illustrates the ability to move an application from one OCP cluster to another.</p>
 <?php
 error_reporting(E_ERROR);
@@ -21,7 +21,7 @@ error_reporting(E_ERROR);
   $containerip = $_SERVER['SERVER_ADDR'];
   $visitstamp = date("D M j G:i:s T Y");
 
-    echo "<table><tr><th>Id</th><th>Container</th><th>Timestamp</th></tr>";
+    echo "<table><tr><th>Container</th><th>Timestamp</th></tr>";
         echo "<tr><td>" . $containerip . "</td><td>" . $visitstamp . "</td></tr>";
     echo "</table>";
 
