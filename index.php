@@ -21,8 +21,8 @@ error_reporting(E_ERROR);
   $containerip = $_SERVER['SERVER_ADDR'];
   $visitstamp = date("D M j G:i:s T Y");
 
-    echo "<table><tr><th>Container IP Address</th><th>Request Timestamp</th><th>Application Build</th></tr>";
-        echo "<tr><td>" . $containerip . "</td><td>" . $visitstamp . "</td><td>" . filemtime('index.php') . "</td></tr>";
+    echo "<table><tr><th>Container IP Address</th><th>Request Time</th><th>Application Build Time</th></tr>";
+        echo "<tr><td>" . $containerip . "</td><td>" . $visitstamp . "</td><td>" . date ("F d Y H:i:s.", filemtime($filename)) . "</td></tr>";
     echo "</table>";
 ?>
  </body>
