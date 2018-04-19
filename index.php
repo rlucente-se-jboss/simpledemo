@@ -21,16 +21,9 @@ error_reporting(E_ERROR);
   $containerip = $_SERVER['SERVER_ADDR'];
   $visitstamp = date("D M j G:i:s T Y");
 
-    echo "<table><tr><th>Container</th><th>Timestamp</th></tr>";
-        echo "<tr><td>" . $containerip . "</td><td>" . $visitstamp . "</td></tr>";
+    echo "<table><tr><th>Container IP Address</th><th>Request Timestamp</th><th>Application Build</th></tr>";
+        echo "<tr><td>" . $containerip . "</td><td>" . $visitstamp . "</td><td>" . filemtime('index.php') . "</td></tr>";
     echo "</table>";
-
-echo "<p><i>";
-$filename = 'index.php';
-if (file_exists($filename)) {
-    echo "This app, $filename, was last modified on " . date ("F d Y H:i:s.", filemtime($filename));
-}
-echo "</i></p>";
 ?>
  </body>
 </html>
